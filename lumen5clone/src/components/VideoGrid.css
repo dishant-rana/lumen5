@@ -1,0 +1,33 @@
+.videoGrid {
+  margin-top: -25px;
+}
+.videoGrid h1 {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #24282f;
+  font-size: 35px;
+  letter-spacing: 1px;
+}
+.videoGrid p {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+.displayVideos {
+  display: grid;
+  width: 75%;
+  margin: auto;
+  margin-left: 220px;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.promVideos {
+  border-radius: 20px;
+  width: 350px;
+}
+.promVideos:hover {
+  cursor: pointer;
+}
