@@ -3,6 +3,20 @@ const User = require('../models/user')
 const userRouter = Router()
 const crypto = require('crypto')
 
+userRouter.post('/tokenCheck', async (req, res) => {
+    try {
+        const data = await User.find(req.body)
+        if (data.length > 0) {
+            return res.send({ status: 'ok', body: data[0]})
+        }
+        else {
+            return res.send({status: 'usr not found'})
+        }
+    } catch (e) {
+        return res.send({ status: 'user not found' })
+    }
+})
+
 userRouter.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body
