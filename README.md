@@ -47,3 +47,14 @@ JSON.body-
 {
    "token": value
 }
+
+for token checking
+
+https://huzaifa-14-06-2022-lumen5-be.herokuapp.com/user/tokenCheck
+
+JSON.body-
+{
+  "token": "351566"
+}
+
+response will be the data of a user with this token
