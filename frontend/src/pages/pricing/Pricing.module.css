@@ -1,0 +1,294 @@
+.ultraIntegratorDiv {
+  margin-top: 100px;
+  text-align: center;
+  justify-content: center;
+}
+.togglediv_main {
+  justify-content: center;
+  margin-left: 42%;
+}
+.togglediv {
+  display: flex;
+  gap: 0%;
+  border: 1px solid;
+  border-radius: 30px;
+  width: 31%;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: white;
+  color: rgb(66, 66, 66);
+}
+.togglediv > div {
+  display: flex;
+  border-radius: 30px;
+  width: 100%;
+}
+.togglediv > div > div:nth-child(1) {
+  border-radius: 30px;
+  padding: 13.77px;
+  width: 100%;
+}
+.togglediv > div > div:nth-child(2) {
+  border-radius: 30px;
+  padding: 13.77px;
+  width: 100%;
+  text-align: center;
+}
+.plans_div {
+  display: flex;
+  gap: 2%;
+  padding: 5%;
+  justify-content: center;
+}
+.plans_div > div {
+  border: 1px solid grey;
+  padding: 2%;
+  border-radius: 12px;
+  height: 300px;
+}
+
+.plan_div {
+  display: flex;
+  gap: 7%;
+  font-size: 14px;
+  justify-content: center;
+}
+.plan_div > div > p,
+h5 {
+  text-align: left;
+  /* text-decoration-line: underline;
+  text-decoration-style: dotted; */
+}
+.compareplan_div {
+  display: flex;
+  gap: 1%;
+  justify-content: center;
+}
+.users_container {
+  margin-top: 1%;
+  padding: 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  gap: 2%;
+  background-color: whitesmoke;
+  padding: 10% 5% 5% 5%;
+  margin-top: 5%;
+}
+.users_container > div {
+  /* border: 1px solid; */
+  padding: 0% 5%;
+  position: relative;
+  margin-bottom: 25%;
+  background-color: white;
+}
+.user_img_div > img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: auto;
+  margin: 6%;
+}
+.user_img_div {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  margin-right: 35%;
+  margin-left: 34%;
+  position: absolute;
+  top: -21%;
+}
+.plans_container_2 {
+  display: flex;
+  gap: 5%;
+  justify-content: right;
+}
+.chooseplan_container {
+  padding: 5%;
+}
+.chooseplan_container hr {
+  font-size: larger;
+  font-weight: bolder;
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+
+.question_div1 {
+  display: grid;
+  grid-template-columns: 45% 42%;
+  /* gap: 10%; */
+  text-align: left;
+  margin-bottom: 5%;
+  font-size: 18px;
+  font-weight: 100;
+  color: rgb(22, 22, 22);
+}
+.question_div2 {
+  display: grid;
+  grid-template-columns: 45% 42%;
+  /* gap: 10%; */
+  text-align: left;
+  font-size: 18px;
+  font-weight: lighter;
+  color: rgb(22, 22, 22);
+}
+.title {
+  font-size: 20px;
+  text-align: center;
+}
+.subheading {
+  padding: 0% 20%;
+}
+.subheading > h1 {
+  font-size: 37px;
+}
+.upto {
+  color: blue;
+  font-size: 12px;
+  margin-left: 53%;
+  margin-top: 2px;
+  position: absolute;
+}
+.plans_inner_div > h1,
+h2,
+p,
+span {
+  text-align: left;
+}
+.plans_inner_div span {
+  font-size: 15px;
+}
+.discount {
+  color: blue;
+  font-size: 14px;
+  position: absolute;
+  margin-top: 0%;
+}
+.plans_inner_div > p {
+  font-size: 13px;
+}
+.plans_inner_div > button {
+  margin-top: 15%;
+  width: 200px;
+  height: 60px;
+  border-radius: 30px;
+  border: 1px solid blue;
+  color: blue;
+  font-size: 16px;
+}
+.plans_inner_div > button:hover {
+  background-color: blue;
+  color: white;
+}
+.blank {
+  color: white;
+}
+.complare_plans_button {
+  background-color: white;
+  color: blue;
+  width: 200px;
+  height: 60px;
+  border-radius: 30px;
+  border: 1px solid blue;
+  font-size: 16px;
+}
+.complare_plans_button:hover {
+  background-color: blue;
+  color: white;
+}
+.get_started_today_button {
+  width: 200px;
+  height: 60px;
+  border-radius: 30px;
+  border: 1px solid blue;
+  color: white;
+  font-size: 16px;
+  background-color: rgb(0, 0, 255);
+}
+.get_started_today_button:hover {
+  background-color: rgb(4, 4, 95);
+  border: 1px solid rgb(4, 4, 95);
+}
+.or_div {
+  margin-top: 1.5%;
+}
+.over_6_million {
+  margin-top: 5%;
+  margin-bottom: 10%;
+  font-weight: 100;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.801);
+}
+.choose_the_plan {
+  margin-top: 0%;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 500;
+}
+.plan_heading {
+  font-size: 24px;
+  font-weight: 100;
+  margin-bottom: 2%;
+}
+.discription {
+  font-size: 15px;
+  margin-top: 0%;
+  text-align: center;
+}
+.plan_button {
+  width: 130px;
+  height: 40px;
+  border-radius: 30px;
+  border: 1px solid blue;
+  color: blue;
+  font-size: 16px;
+  background-color: white;
+}
+.plan_button:hover {
+  background-color: blue;
+  color: white;
+}
+.user_dis {
+  margin: 20% 0% 10% 0%;
+  text-align: center;
+}
+.username {
+  text-align: center;
+  font-size: 12px;
+  color: grey;
+}
+.packName {
+  text-align: left;
+}
+.table {
+  width: 100%;
+}
+.table > tr > th {
+  text-align: left;
+  margin-left: 5%;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
+.table > tr:nth-child(1) {
+  background-color: whitesmoke;
+}
+.table > tr:nth-child(3) {
+  background-color: whitesmoke;
+}
+.table > tr:nth-child(5) {
+  background-color: whitesmoke;
+}
+.table > tr:nth-child(7) {
+  background-color: whitesmoke;
+}
+.table > tr:nth-child(9) {
+  background-color: whitesmoke;
+}
+.table > tr > td {
+  padding: 1.5%;
+}
+.frequently {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 8%;
+}
