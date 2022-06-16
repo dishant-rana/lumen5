@@ -20,6 +20,7 @@ export const ExploreVideos = () => {
       setVideosData([...data]);
     } catch (e) {
       console.log("Error");
+      console.log(e);
     }
   };
 
@@ -51,7 +52,7 @@ export const ExploreVideos = () => {
           <button onClick={() => getData(url[4])}>Localization</button>
         </div>
         <div className={styles.categoryGrid}>
-          {videosData.map((el, index) => {
+          {videosData.map((el) => {
             return (
               <video
                 key={el._id}
