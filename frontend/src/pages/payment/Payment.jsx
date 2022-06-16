@@ -26,7 +26,7 @@ const Payment = () => {
               <span className={style.span2}>Starter - v2 (Annual)</span>
               <span className={style.span2}>$708.00</span>
             </div>
-            <span>Billed yearly</span>
+            <span style={{ fontSize: "12px" }}>Billed yearly</span>
           </div>
 
           <div>
@@ -34,13 +34,13 @@ const Payment = () => {
               <span className={style.span2}>Subtotal</span>
               <span className={style.span2}>$708.00</span>
             </div>
-            <hr />
+            <hr style={{ marginTop: "15px", marginBottom: "15px" }} />
 
             <div className={style.opt1}>
               <span>Tax</span>
               <span>$0.00</span>
             </div>
-            <hr />
+            <hr style={{ marginTop: "15px", marginBottom: "15px" }} />
 
             <div className={style.opt1}>
               <span className={style.span2}>Total due today</span>
@@ -48,6 +48,8 @@ const Payment = () => {
             </div>
           </div>
         </div>
+
+        <p className={style.Pstyles}></p>
 
         {/* <-----------------right side box-----------------> */}
 
@@ -59,7 +61,10 @@ const Payment = () => {
               <div className={style.clrBlck}>arnavmania@gmail.com</div>
             </div>
           </div>
-          <div className={style.mainInp_Bx + " " + style.margin}>
+
+          {/* <------------ card information------------------> */}
+
+          <div className={style.mainInp_Bx}>
             <span>Card information</span>
             <div>
               <input
@@ -96,7 +101,10 @@ const Payment = () => {
               <span>Billing address</span>
               <br />
 
-              <select className={style.slctStyle + " " + style.inpBx_size1}>
+              <select
+                className={style.slctStyle + " " + style.inpBx_size1}
+                style={{ height: "36px" }}
+              >
                 <option>India</option>
               </select>
 

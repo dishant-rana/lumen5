@@ -1,27 +1,28 @@
-/* body {
+.main_bx {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Helvetica Neue, Ubuntu, sans-serif;
-  background-color: blue;
-  margin: 0;
-  padding: 0;
   font-size: 16px;
   color: rgba(26, 26, 26, 0.9);
   color: #1a1a1a80;
   -webkit-font-smoothing: antialiased;
-} */
+}
 
 .main_bx {
   display: flex;
-  gap: 15%;
-  margin-top: 50px;
+  justify-content: center;
+  /* border:2px solid black; */
+  /* width:90%; */
+  gap: 5%;
+  margin-top: 40px;
 }
 
 .leftMain_Bx {
+  margin-top: 03px;
   box-sizing: border-box;
   height: 449px;
   width: 380px;
   /* border:2px solid black; */
-  margin-left: 15%;
+  /* margin-left:15%; */
 }
 .pic {
   width: 105.65px;
@@ -31,33 +32,55 @@
 .clr {
   color: rgba(26, 26, 26, 0.9);
   font-size: 36px;
+  margin-top: -20px;
+}
+.topStyle {
+  font-weight: 600;
 }
 .span1 {
+  display: inline-block;
   color: #1a1a1a80;
+  font-size: 14px;
+  /* box-sizing: border-box; */
+  width: 50px;
+  height: 45px;
+  /* border:2px solid black; */
 }
 
 .opt {
   height: 41.6px;
   width: 372px;
+  margin-bottom: 30px;
 }
+
 .opt1 {
   display: flex;
   height: 20.8px;
   width: 372px;
   color: #1a1a1a80;
   justify-content: space-between;
+  font-size: 14px;
 }
 .span2 {
   color: rgba(26, 26, 26, 0.9);
-  font-size: 20px;
+  font-size: 14px;
+  font-weight: 500;
   /* margin-left:150px; */
+}
+
+.Pstyles {
+  border: 1px solid black;
+  border-style: none;
+  width: 5px;
+  background-color: #f9f9f9;
 }
 
 .rightMain_Bx {
   box-sizing: border-box;
   /* border:2px solid brown; */
+  /* margin:auto; */
   height: 723.2px;
-  width: 380px;
+  width: 375px;
   color: #1a1a1ab3;
 }
 
@@ -69,8 +92,8 @@
 .emailSet_Bx {
   border-radius: 07px;
   background-color: #f7f7f7;
-  height: 42.2px;
-  width: 366px;
+  height: 36px;
+  width: 350px;
   border: 2px solid #1a1a1ab3;
   margin-top: 12px;
   padding-left: 12px;
@@ -78,7 +101,7 @@
   /* margin-bottom:20px; */
 }
 .margin {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .emailSet {
@@ -98,8 +121,8 @@
   /* margin-bottom: 20px; */
 }
 .inpBx_size {
-  height: 36px;
-  width: 362px;
+  height: 30px;
+  width: 350px;
   padding-left: 12px;
   /* padding:8px 12px; */
   /* border-bottom-left-radius: 6px; */
@@ -113,13 +136,13 @@
 }
 
 .inpBx_size1 {
-  height: 36px;
-  width: 172px;
+  height: 30px;
+  width: 166px;
   padding-left: 12px;
   /* padding:8px 12px; */
 }
 .slctStyle {
-  width: 380px;
+  width: 368px;
   font-size: 16px;
   border-top-left-radius: 06px;
 }
@@ -129,11 +152,11 @@
 }
 
 .btn {
-  height: 44px;
-  width: 380px;
+  height: 40px;
+  width: 368px;
   background-color: rgb(88, 70, 246);
   border-radius: 8px;
-  color: #f7f7f7;
+  color: #ffffff;
 }
 .btnC {
   text-align: center;
