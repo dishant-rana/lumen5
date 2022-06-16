@@ -5,7 +5,10 @@ export const Description = () => {
     <>
       <div className={styles.descriptionContainer}>
         <div className={styles.imageContainer}>
-          <img src="https://storage.googleapis.com/lumen5-site-images/website-assets/image-content.png" />
+          <img
+            src="https://storage.googleapis.com/lumen5-site-images/website-assets/image-content.png"
+            alt=""
+          />
         </div>
         <div className={styles.blogDescription}>
           <h1>
@@ -85,15 +88,19 @@ export const Description = () => {
         </div>
         <div className={styles.imageContainer}>
           <img
-            style={{ width: "540px" }}
+            style={{ width: "560px" }}
             src="https://storage.googleapis.com/lumen5-site-images/website-assets/image-media.png"
+            alt=""
           />
         </div>
       </div>
 
       <div className={styles.descriptionContainer}>
         <div className={styles.imageContainer}>
-          <img src="https://storage.googleapis.com/lumen5-site-images/website-assets/image-customize.png" />
+          <img
+            src="https://storage.googleapis.com/lumen5-site-images/website-assets/image-customize.png"
+            alt=""
+          />
         </div>
         <div className={styles.blogDescription}>
           <h1>

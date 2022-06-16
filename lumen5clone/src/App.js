@@ -1,6 +1,7 @@
 import "./App.css";
 import { BlogCard } from "./components/BlogCard";
 import { Description } from "./components/Description";
+import { ExploreVideos } from "./components/ExploreVideos";
 import { Footer } from "./components/Footer";
 
 import { Header } from "./components/Header";
@@ -13,6 +14,7 @@ function App() {
       <Home />
       <VideoGrid />
       <Description />
+      <ExploreVideos />
       <BlogCard />
       <Footer />
     </>

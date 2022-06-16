@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useEffect } from "react";
 import styles from "./VideoGrid.module.css";
 export const VideoGrid = () => {
-  let vref = useRef();
   const [videosData, setVideosData] = useState([]);
   const playVideo = (e) => {
     e.target.play();
