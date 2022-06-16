@@ -1,5 +1,6 @@
 import "./App.css";
 import { BlogCard } from "./components/BlogCard";
+import { Description } from "./components/Description";
 import { Footer } from "./components/Footer";
 
 import { Header } from "./components/Header";
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Home />
       <VideoGrid />
+      <Description />
       <BlogCard />
       <Footer />
     </>

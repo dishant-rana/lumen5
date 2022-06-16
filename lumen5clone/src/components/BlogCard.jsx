@@ -1,23 +1,23 @@
 import React from "react";
-import "./BlogCard.css";
+import styles from "./BlogCard.module.css";
 export const BlogCard = () => {
   return (
     <div>
-      <h1 className="blogCards-heading">
+      <h1 className={styles["blogCards-heading"]}>
         Tips and tricks for amplifying
         <br /> your brand with video
       </h1>
-      <div className="blogCards">
-        <div className="singleCard">
+      <div className={styles.blogCards}>
+        <div className={styles.singleCard}>
           <div>
             <img
               src="https://lumen5.com/learn/wp-content/uploads/2019/05/Video-Marketing-How-to-Get-Started.jpg"
               alt=""
             />
           </div>
-          <div className="aboutBlog">
+          <div className={styles.aboutBlog}>
             <p>BLOG</p>
-            <p className="cardDescription">
+            <p className={styles.cardDescription}>
               Video Marketing:
               <br />
               How to Get Started
@@ -31,16 +31,16 @@ export const BlogCard = () => {
             </p>
           </div>
         </div>
-        <div className="singleCard">
+        <div className={styles.singleCard}>
           <div>
             <img
               src="https://lumen5.com/learn/wp-content/uploads/2019/08/Host-an-Instagram-Takeover-in-7-Simple-Steps.jpg"
               alt=""
             />
           </div>
-          <div className="aboutBlog">
+          <div className={styles.aboutBlog}>
             <p>BLOG</p>
-            <p className="cardDescription">
+            <p className={styles.cardDescription}>
               How to Increase
               <br />
               Your Facebook Views
@@ -54,16 +54,16 @@ export const BlogCard = () => {
             </p>
           </div>
         </div>
-        <div className="singleCard">
+        <div className={styles.singleCard}>
           <div>
             <img
               src="https://lumen5.com/learn/wp-content/uploads/2018/10/photo-1518406432532-9cbef5697723.jpeg"
               alt=""
             />
           </div>
-          <div className="aboutBlog">
+          <div className={styles.aboutBlog}>
             <p>BLOG</p>
-            <p className="cardDescription">
+            <p className={styles.cardDescription}>
               The Importance of
               <br />
               Video in Your

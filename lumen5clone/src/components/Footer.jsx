@@ -1,9 +1,9 @@
 import React from "react";
-import "./Footer.css";
+import styles from "./Footer.module.css";
 export const Footer = () => {
   return (
     <>
-      <div className="blueBanner">
+      <div className={styles.blueBanner}>
         <div>
           <h1>
             Join 800,000+ companies that are using Lumen5 to tell their stories.
@@ -15,14 +15,14 @@ export const Footer = () => {
               any technical expertise.
             </p>
           </div>
-          <div className="bannerButton">
+          <div className={styles.bannerButton}>
             <button>Sign up free</button>
           </div>
         </div>
       </div>
-      <div className="footer">
-        <div className="logo-box">
-          <a href="home.html">
+      <div className={styles.footer}>
+        <div className={styles["logo-box"]}>
+          <a href="#">
             {" "}
             <img src="https://storage.googleapis.com/lumen5-site-images/L5-logo/L5-logo-white.png" />
           </a>
@@ -31,9 +31,9 @@ export const Footer = () => {
             to help you create professional video content in minutes.
           </p>
         </div>
-        <div className="footer-links">
+        <div className={styles["footer-links"]}>
           <ul>
-            <li className="top-upper">EXPLORE</li>
+            <li className={styles["top-upper"]}>EXPLORE</li>
             <li>About</li>
             <li>Features</li>
             <li>Careers</li>
@@ -42,9 +42,9 @@ export const Footer = () => {
             <li>Community Group</li>
           </ul>
         </div>
-        <div className="footer-links deactive">
+        <div className={`${styles["footer-links"]} ${styles.deactive}`}>
           <ul>
-            <li className="top-upper">VIDEO TOOLS</li>
+            <li className={styles["top-upper"]}>VIDEO TOOLS</li>
             <li>Add Text to Video</li>
             <li>Cut Video</li>
             <li>Merge Video</li>
@@ -53,9 +53,9 @@ export const Footer = () => {
             <li>See all</li>
           </ul>
         </div>
-        <div className="footer-links deactive">
+        <div className={`${styles["footer-links"]} ${styles.deactive}`}>
           <ul>
-            <li className="top-upper">VIDEO CREATORS</li>
+            <li className={styles["top-upper"]}>VIDEO CREATORS</li>
             <li>Video Editor</li>
             <li>Photo Video Maker</li>
             <li>Facebook Video Maker</li>

@@ -2,7 +2,7 @@ import React from "react";
 import { useRef } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import "./VideoGrid.css";
+import styles from "./VideoGrid.module.css";
 export const VideoGrid = () => {
   let vref = useRef();
   const [videosData, setVideosData] = useState([]);
@@ -31,16 +31,16 @@ export const VideoGrid = () => {
           width: "100%",
         }}
       ></div>
-      <div className="videoGrid">
+      <div className={styles.videoGrid}>
         <h1>Captivating video templates</h1>
         <p>Drag and drop. No experience required.</p>
-        <div className="displayVideos">
+        <div className={styles.displayVideos}>
           {videosData.map((el, index) => {
             return (
               <video
                 muted="muted"
                 key={index}
-                className="promVideos"
+                className={styles.promVideos}
                 loop
                 onMouseOver={(e) => playVideo(e)}
                 onMouseOut={(e) => stopVideo(e)}
