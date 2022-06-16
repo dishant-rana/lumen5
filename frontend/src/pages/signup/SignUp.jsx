@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./signup.module.css";
+import facebook from "../../assets/facebook.png";
 
 const db = [
   "https://storage.googleapis.com/lumen5-site-images/website-assets/logo-seimens-white.png",
@@ -11,7 +12,91 @@ const db = [
   "https://storage.googleapis.com/lumen5-site-images/website-assets/logo-cisco-white.png"
 ];
 
+const isLower = (str) => {
+  for (let i = 0; i < str.length; i++) {
+    const code = str.charCodeAt(i);
+    if (code >= 97 && code <= 122) {
+      // small letter
+      return true;
+    }
+  }
+  return false;
+};
+
+const isUpper = (str) => {
+  for (let i = 0; i < str.length; i++) {
+    const code = str.charCodeAt(i);
+    if (code >= 65 && code <= 90) {
+      // big letter
+      return true;
+    }
+  }
+  return false;
+};
+
+const isMin8 = (str) => {
+  return str.length >= 8;
+};
+
+const symbolChecker = (str) => {
+  for (let i = 0; i < str.length; i++) {
+    const code = str.charCodeAt(i);
+    if (
+      code === 33 ||
+      (code >= 35 && code <= 38) ||
+      (code >= 40 && code <= 47) ||
+      (code >= 58 && code <= 64) ||
+      (code >= 91 && code <= 95) ||
+      (code >= 123 && code <= 126)
+    ) {
+      //special char and symbols
+      return true;
+    }
+  }
+  return false;
+};
+
+const digitChecker = (str) => {
+  for (let i = 0; i < str.length; i++) {
+    const code = str.charCodeAt(i);
+    if (code >= 48 && code <= 57) {
+      return true;
+    }
+  }
+  return false;
+};
+
+const isNumOrSym = (str) => {
+  if (symbolChecker(str)) {
+    return true;
+  }
+  if (digitChecker(str)) {
+    return true;
+  }
+
+  return false;
+};
+
 export const SignUp = () => {
+  const [lower, setLower] = useState(false);
+  const [upper, setUpper] = useState(false);
+  const [min8, setMin8] = useState(false);
+  const [numOrSym, setNumOrSym] = useState(false);
+  const passwordChecker = (str) => {
+    let ans = null;
+    ans = isLower(str);
+    setLower(ans);
+
+    ans = isUpper(str);
+    setUpper(ans);
+
+    ans = isMin8(str);
+    setMin8(ans);
+
+    ans = isNumOrSym(str);
+    setNumOrSym(ans);
+  };
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -19,6 +104,12 @@ export const SignUp = () => {
   const navigate = useNavigate();
 
   const handleSignUp = () => {
+    if (name === "" || email === "" || password === "") {
+      return alert("One or more input fields are empty");
+    }
+    if (!lower || !upper || !min8 || !numOrSym) {
+      return alert("Password does not satisfied the given criteria");
+    }
     document.title = "Loading...";
     const payload = {
       name,
@@ -104,27 +195,54 @@ export const SignUp = () => {
           </div>
           <input
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => {
+              setPassword(e.target.value);
+              passwordChecker(e.target.value);
+            }}
             type={toggleType ? "text" : "password"}
           />
         </div>
 
         <div className={styles.afterPassword}>
           <div>
-            <div>
-              <span>•</span> One lowercase character
-            </div>
-            <div>
-              <span>•</span> One uppercase character
-            </div>
+            {lower ? (
+              <div style={{ textDecoration: "line-through" }}>
+                <span>•</span> One lowercase character
+              </div>
+            ) : (
+              <div>
+                <span>•</span> One lowercase character
+              </div>
+            )}
+            {upper ? (
+              <div style={{ textDecoration: "line-through" }}>
+                <span>•</span> One uppercase character
+              </div>
+            ) : (
+              <div>
+                <span>•</span> One uppercase character
+              </div>
+            )}
           </div>
           <div>
-            <div>
-              <span>•</span> 8 characters minimum
-            </div>
-            <div>
-              <span>•</span> Contains a number or symbol
-            </div>
+            {min8 ? (
+              <div style={{ textDecoration: "line-through" }}>
+                <span>•</span> 8 characters minimum
+              </div>
+            ) : (
+              <div>
+                <span>•</span> 8 characters minimum
+              </div>
+            )}
+            {numOrSym ? (
+              <div style={{ textDecoration: "line-through" }}>
+                <span>•</span> Contains a number or symbol
+              </div>
+            ) : (
+              <div>
+                <span>•</span> Contains a number or symbol
+              </div>
+            )}
           </div>
         </div>
 
@@ -139,16 +257,27 @@ export const SignUp = () => {
             <hr></hr>
           </div>
 
-          <button className={styles.button2}>Sign up with Facebook</button>
+          <button
+            onClick={() => {
+              window.open("https://www.facebook.com/", "_blank");
+            }}
+            className={styles.button2}
+          >
+            <img className={styles.insideButton} src={facebook} alt="" />
+            <span>Sign up with Facebook</span>
+          </button>
         </div>
 
         <div className={styles.bottomLines}>
-          Already have a Lumen5 account? <a href="/signin">Log in</a>
+          Already have a Lumen5 account? <Link to="/signin">Log in</Link>
         </div>
 
         <div className={styles.conclusionLine}>
           By clicking “Create account” I agree to Lumen5’s{" "}
-          <a href="https://lumen5.com/terms/">Terms of Use</a> and{" "}
+          <a href="https://lumen5.com/terms/" target="_blank" rel="noreferrer">
+            Terms of Use
+          </a>{" "}
+          and{" "}
           <a
             href="https://lumen5.com/privacy/"
             target="_blank"

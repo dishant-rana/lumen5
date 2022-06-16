@@ -71,7 +71,7 @@
 
 .passwordEye {
   cursor: pointer;
-  color: lightgray;
+  color: rgb(168, 168, 168);
   display: flex;
   gap: 10px;
 }
@@ -133,6 +133,14 @@
   border: 2px solid #5846f6;
   background: white;
   color: #5846f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.insideButton {
+  height: 34%;
+  margin-right: 2%;
 }
 
 .bottomLines {
