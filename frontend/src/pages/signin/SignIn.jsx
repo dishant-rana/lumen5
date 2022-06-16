@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./signin.module.css";
+import facebook from "../../assets/facebook.png";
+import key from "../../assets/key.png";
 
 const db = [
   "https://storage.googleapis.com/lumen5-site-images/website-assets/logo-seimens-white.png",
@@ -33,13 +35,11 @@ export const SignIn = () => {
     })
       .then((res) => res.json())
       .then((data) => {
+        document.title =
+          "Lumen5 - Video Maker | Create Videos Online in Minutes";
         if (data.status === "user not found") {
-          document.title =
-            "Lumen5 - Video Maker | Create Videos Online in Minutes";
           setIfIncorrect(true);
         } else {
-          document.title =
-            "Lumen5 - Video Maker | Create Videos Online in Minutes";
           localStorage.setItem("token", data.token);
           navigate("/dashboard");
         }
@@ -131,15 +131,26 @@ export const SignIn = () => {
           </div>
 
           <div>
-            <button className={styles.button2}>Login with Facebook</button>
+            <button
+              onClick={() => {
+                window.open("https://www.facebook.com/", "_blank");
+              }}
+              className={styles.button2}
+            >
+              <img className={styles.insideButton} src={facebook} alt="" />
+              <span>Sign up with Facebook</span>
+            </button>
           </div>
           <div>
-            <button className={styles.button3}>Login via SSO</button>
+            <button className={styles.button3}>
+              <img className={styles.insideButton} src={key} alt="" />
+              <span>Login via SSO</span>
+            </button>
           </div>
         </div>
 
         <div className={styles.createAccountLine}>
-          Need a Lumen5 account? <a href="/signup">Create an account</a>
+          Need a Lumen5 account? <Link to="/signup">Create an account</Link>
         </div>
 
         <div className={styles.lastLine}>© 2022 Lumen5</div>

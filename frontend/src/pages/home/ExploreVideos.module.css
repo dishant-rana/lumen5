@@ -1,0 +1,42 @@
+.categoryButton {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin: auto;
+}
+.categoryButton button {
+  font-family: "Poppins", sans-serif;
+  height: 40px;
+  width: 180px;
+  border-radius: 40px;
+  font-size: 18px;
+  border: 0.5px solid #5846f6;
+  color: #5846f6;
+  background-color: white;
+}
+.categoryButton button:hover {
+  background-color: #4e3ded;
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.categoryButton button:focus {
+  background-color: #5846f6;
+  color: white;
+}
+.categoryGrid {
+  display: grid;
+  width: 75%;
+  margin: auto;
+  margin-left: 220px;
+  margin-top: 50px;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.singleVideo {
+  border-radius: 20px;
+  width: 350px;
+}
+.categoryGrid video {
+  cursor: pointer;
+}
