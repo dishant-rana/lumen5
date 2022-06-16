@@ -1,0 +1,37 @@
+.blogCards {
+  color: #24282f;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+.singleCard {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  font-family: "Poppins", sans-serif;
+  width: 240px;
+  display: flex;
+  border-radius: 20px;
+  flex-direction: column;
+}
+.singleCard img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 240px;
+  height: 158px;
+}
+.cardDescription {
+  margin-top: 0px;
+  font-size: 20px;
+  font-weight: 100;
+}
+.aboutBlog {
+  margin: auto;
+}
+.blogCards-heading {
+  margin-top: 100px;
+  color: #24282f;
+  font-size: 40px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
