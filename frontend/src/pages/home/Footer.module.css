@@ -74,6 +74,7 @@ ul li {
   width: 70%;
   margin-bottom: 100px;
   background: url("https://storage.googleapis.com/lumen5-site-images/website-assets/cta-bg.png");
+  padding-bottom: 50px;
 }
 .blueBanner div {
   margin: auto;
@@ -101,4 +102,12 @@ ul li {
   color: #5846f6;
   width: 120px;
   height: 50px;
+}
+
+.bannerButton > button {
+  background-color: white;
+}
+
+.bannerButton > button:hover {
+  background-color: whitesmoke;
 }
