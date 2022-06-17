@@ -1,0 +1,64 @@
+.descriptionContainer {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  margin-top: 100px;
+  color: #24282f;
+}
+.imageContainer {
+  margin-top: 80px;
+}
+.imageContainer img {
+  width: 510px;
+  height: 423px;
+}
+.blogDescription {
+  margin-left: 100px;
+  font-family: "Poppins", sans-serif;
+  width: 40%;
+}
+.blogDescription h1 {
+  font-size: 40px;
+  line-height: 50px;
+}
+.blogDescription p {
+  letter-spacing: 1px;
+  width: 80%;
+  line-height: 25px;
+}
+.blogDescription h4 {
+  margin-top: 30px;
+  font-weight: light;
+  color: rgb(88, 70, 246);
+}
+.blogDescription hr {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 80%;
+  margin-left: 0;
+  font-weight: lighter;
+}
+.blogDescription h5 {
+  color: #24282f;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: lighter;
+}
+.author {
+  display: flex;
+  align-items: center;
+}
+.authorImg {
+  margin-right: 20px;
+}
+.authorImg img {
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+}
+.authorInfo img {
+  width: 120px;
+  height: 48px;
+  margin-top: 10px !important;
+}

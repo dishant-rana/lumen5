@@ -1,0 +1,179 @@
+.sidenav {
+  height: 100%;
+  width: 31.7%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-image: url("https://storage.googleapis.com/lumen5-site-images/website-assets/login-bg3.png");
+  background-size: cover;
+  overflow-x: hidden;
+  color: white;
+  box-sizing: border-box;
+  padding: 22px 3.7%;
+}
+
+.sidenavHeading {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 58px;
+  margin-bottom: 25px;
+}
+
+.sidenavPara {
+  font-size: 25px;
+}
+
+.sidenavGrid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.afterSidenav {
+  margin-left: 31.7%;
+  padding-left: 8.7%;
+  padding-right: 16.5%;
+}
+
+.heading {
+  font-size: 37px;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin-bottom: 50px;
+}
+
+.formData > div {
+  margin-bottom: 15px;
+}
+
+.formData > input {
+  border: none;
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+  height: 30px;
+  font-size: 15px;
+  color: gray;
+  margin-bottom: 13px;
+  padding-bottom: 8px;
+}
+
+.formData > input:focus {
+  outline: none;
+  border-bottom: 2px solid #5846f6;
+  height: 29px;
+}
+
+.forgetPassword {
+  cursor: pointer;
+  text-align: right;
+  color: rgb(168, 168, 168);
+  font-size: 14px;
+}
+
+.passwordDivision {
+  display: flex;
+  justify-content: space-between;
+}
+
+.passwordEye {
+  cursor: pointer;
+  color: rgb(168, 168, 168);
+  display: flex;
+  gap: 10px;
+}
+
+.passwordEye:hover {
+  color: gray;
+}
+
+.handleSignUp {
+  cursor: pointer;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 15px;
+  color: white;
+  background-color: #5846f6;
+  border: none;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.handleSignUp:hover {
+  background-color: #3722f3;
+}
+
+.hrDivision {
+  display: flex;
+  align-items: center;
+  margin: 25px 0px;
+}
+
+.hrDivision > hr {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.hrDivision > div {
+  margin: 0px 15px;
+  color: grey;
+}
+
+.button2 {
+  cursor: pointer;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 15px;
+  width: 100%;
+  border: 2px solid #5846f6;
+  background: white;
+  color: #5846f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.insideButton {
+  height: 34%;
+  margin-right: 2%;
+}
+
+.button3 {
+  margin-top: 10px;
+  cursor: pointer;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 15px;
+  width: 100%;
+  border: 1px solid #5846f6;
+  background: white;
+  color: #5846f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button3:hover {
+  color: white;
+  background-color: #5846f6;
+}
+
+.createAccountLine {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.createAccountLine > a {
+  text-decoration: none;
+  color: #5846f6;
+  text-decoration: underline;
+}
+
+.lastLine {
+  font-size: 14px;
+  margin-top: 30px;
+  color: gray;
+  text-align: center;
+  margin-bottom: 5px;
+}
