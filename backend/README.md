@@ -1,29 +1,30 @@
-for Captivating video templates(GET request)
+### Feel Free to Use the APIs we have built.
+* For Captivating video templates(GET request)
 
 https://huzaifa-14-06-2022-lumen5-be.herokuapp.com/resources/get/template
 
-for content marketing(GET request)
+* For content marketing(GET request)
 
 https://huzaifa-14-06-2022-lumen5-be.herokuapp.com/resources/get/content_marketing
 
-for communications(GET request)
+* For communications(GET request)
 
 https://huzaifa-14-06-2022-lumen5-be.herokuapp.com/resources/get/communications
 
-for promotional(GET request)
+* For promotional(GET request)
 
 https://huzaifa-14-06-2022-lumen5-be.herokuapp.com/resources/get/promotional
 
-for people & culture(GET request)
+* For people & culture(GET request)
 
 https://huzaifa-14-06-2022-lumen5-be.herokuapp.com/resources/get/people_&_culture
 
-for localization(GET request)
+* For localization(GET request)
 
 https://huzaifa-14-06-2022-lumen5-be.herokuapp.com/resources/get/localization
 
 
-for sign up(POST request)
+* For sign up(POST request)
 
 https://huzaifa-14-06-2022-lumen5-be.herokuapp.com/user/add
 
@@ -35,11 +36,11 @@ JSON.body-
   "password": "robert@123"
 }
 
-for login(POST request)
+* For login(POST request)
 
 https://huzaifa-14-06-2022-lumen5-be.herokuapp.com/user/login
 
-for logout(POST request)
+* For logout(POST request)
 
 https://huzaifa-14-06-2022-lumen5-be.herokuapp.com/user/logout
 
@@ -48,7 +49,7 @@ JSON.body-
    "token": value
 }
 
-for token checking(POST request)
+* For token checking(POST request)
 
 https://huzaifa-14-06-2022-lumen5-be.herokuapp.com/user/tokenCheck
 
