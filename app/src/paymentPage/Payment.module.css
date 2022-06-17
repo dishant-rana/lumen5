@@ -135,9 +135,15 @@
 .inpBx_size{
     height:30px;
     width:350px;
+    outline: none;
     padding-left:12px;
+    border: 0.4px solid rgba(0, 0, 0, 0.347);
     /* padding:8px 12px; */
     /* border-bottom-left-radius: 6px; */
+}
+.inpBx_size:focus{
+    outline: 1px solid rgb(68, 255, 211);
+    box-shadow: 1px 1px black;
 }
 .cardInpTop{
     border-top-left-radius: 06px;
@@ -177,3 +183,7 @@
     /* border:2px solid black; */
     width:80px;
 }
+
+/* option:first {
+    color: #999;
+} */

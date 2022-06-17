@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+import DropdwnAdd from "./components/DropdwnAdd";
+// import { useContext} from "react";
+// import { userContext } from "./components/DropdwnAdd";
 import style from "./Payment.module.css";
 
+
+
+
 const Payment = () => {
+  // const newData = useContext(userContext)
+  // console.log(newData);
+
+  const [show, setState]=useState(false)
+
+  const handleClick=()=>{
+    setState(true)
+  }
+
+  
+
   return (
     <>
       <div className={style.main_bx}>
@@ -109,10 +126,19 @@ const Payment = () => {
             <option>India</option>
           </select>
 
-          <input className={style.inpBx_size + " " + style.cardInpBtm}/>
+          <input className={style.inpBx_size + " " + style.cardInpBtm} placeholder='Address'/>
         </div>
+    {
+  show? '' : <span className={style.uDropDwn} onClick={handleClick}>Enter address manually</span>
+          }
+       
+       <div>
+       {
+        show? <DropdwnAdd />: " "
 
-          <span className={style.uDropDwn}>Enter address manually</span>
+       
+       }
+       </div>
         </div>
 
         {/* <----------input-checkbox-------------> */}
