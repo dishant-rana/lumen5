@@ -49,7 +49,7 @@ export const ExploreVideos = () => {
             return (
               <video
                 muted="muted"
-                key={index}
+                key={el._id}
                 className={styles.singleVideo}
                 loop
                 onMouseOver={(e) => playVideo(e)}

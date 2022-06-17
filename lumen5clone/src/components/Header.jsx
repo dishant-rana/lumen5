@@ -8,6 +8,7 @@ export const Header = () => {
           <img
             className="SvgLogo"
             src="https://storage.googleapis.com/lumen5-site-images/L5-logo/L5-logo-header.png"
+            alt=""
           />
         </a>
         <label id="Menulabel" htmlFor="toggle">

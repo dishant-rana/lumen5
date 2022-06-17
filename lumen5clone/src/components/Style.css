@@ -6,7 +6,7 @@
   background: whitesmoke;
   text-align: right;
   height: 70px;
-  width: 98.99%;
+  width: 100%;
   line-height: 70px;
   margin: auto;
   font-family: "Roboto", sans-serif;
@@ -116,6 +116,7 @@
   top: 0;
   justify-content: space-around;
   margin-top: 4%;
+  margin-right: -10px;
 }
 
 .background_gray {
