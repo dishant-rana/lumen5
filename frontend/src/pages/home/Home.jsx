@@ -1,6 +1,8 @@
 import React from "react";
-import "./Style.css";
+import { useNavigate } from "react-router-dom";
+
 export const Home = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <div className="lumen_intro background_gray">
@@ -20,6 +22,7 @@ export const Home = () => {
             in a snap.
           </p>
           <button
+            onClick={() => navigate("/signup")}
             className="sign_up_button pointer1"
             style={{ outline: "none", border: "none" }}
           >

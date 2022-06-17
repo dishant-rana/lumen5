@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import style from "./Pricing.module.css";
 
 const Pricing = () => {
@@ -24,6 +25,7 @@ const Pricing = () => {
     setSubtime("per month");
   };
 
+  const navigate = useNavigate();
   return (
     <div className={style.ultraIntegratorDiv}>
       <div>
@@ -84,7 +86,23 @@ const Pricing = () => {
           </h1>
           <p>{subtime}</p>
           <p className={style.discount}>{discount}</p>
-          <button>Get started</button>
+          <button
+            onClick={() => {
+              let data = JSON.parse(localStorage.getItem("user"));
+              data = {
+                ...data,
+                plan: {
+                  title: "starter",
+                  price: price1,
+                  period: subtime === "per month" ? "per month" : "per year"
+                }
+              };
+              localStorage.setItem("user", JSON.stringify(data));
+              navigate("/payment");
+            }}
+          >
+            Get started
+          </button>
         </div>
         <div className={style.plans_inner_div}>
           <h2>Professional</h2>
@@ -94,7 +112,23 @@ const Pricing = () => {
           </h1>
           <p>{subtime}</p>
           <p className={style.discount}>{discount}</p>
-          <button>Get started</button>
+          <button
+            onClick={() => {
+              let data = JSON.parse(localStorage.getItem("user"));
+              data = {
+                ...data,
+                plan: {
+                  title: "professional",
+                  price: price2,
+                  period: subtime === "per month" ? "per month" : "per year"
+                }
+              };
+              localStorage.setItem("user", JSON.stringify(data));
+              navigate("/payment");
+            }}
+          >
+            Get started
+          </button>
         </div>
         <div className={style.plans_inner_div}>
           <h2>Enterprise</h2>

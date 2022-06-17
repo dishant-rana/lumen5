@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import { Dashboard } from "../pages/dashboard/Dashboard";
 
 import { HomeMain } from "../pages/home/HomeMain";
 import { Payment } from "../pages/payment/Payment";
@@ -14,6 +15,7 @@ const MainRoutes = () => {
         <Route path="/" element={<HomeMain />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/pricing" element={<PricingMain />} />
         <Route path="/payment" element={<Payment />} />
       </Routes>

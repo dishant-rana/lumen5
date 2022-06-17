@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Description.module.css";
 export const Description = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className={styles.descriptionContainer}>
@@ -21,7 +23,9 @@ export const Description = () => {
             your content to a layout, and find music and visuals that enhance
             your message.
           </p>
-          <h4>Get started for free </h4>
+          <h4 onClick={() => navigate("/signup")} style={{ cursor: "pointer" }}>
+            Get started for free{" "}
+          </h4>
           <hr />
           <h5>
             “Lumen5 has enabled us to create more videos
@@ -61,7 +65,9 @@ export const Description = () => {
             photos, video clips, and audio files, so you always have the
             elements you need to create the perfect video.
           </p>
-          <h4>Get started for free </h4>
+          <h4 onClick={() => navigate("/signup")} style={{ cursor: "pointer" }}>
+            Get started for free{" "}
+          </h4>
           <hr />
           <h5>
             “Lumen5 has enabled us to create more videos
@@ -112,7 +118,9 @@ export const Description = () => {
             you can customize each video with your unique logo, watermark,
             fonts, colors, and more.
           </p>
-          <h4>Get started for free </h4>
+          <h4 onClick={() => navigate("/signup")} style={{ cursor: "pointer" }}>
+            Get started for free{" "}
+          </h4>
           <hr />
           <h5>
             “Lumen5 has enabled us to create more videos

@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./Footer.module.css";
+import { Link, useNavigate } from "react-router-dom";
 export const Footer = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className={styles.blueBanner}>
@@ -16,16 +18,24 @@ export const Footer = () => {
             </p>
           </div>
           <div className={styles.bannerButton}>
-            <button>Sign up free</button>
+            <button
+              onClick={() => navigate("/signup")}
+              style={{ cursor: "pointer" }}
+            >
+              Sign up free
+            </button>
           </div>
         </div>
       </div>
       <div className={styles.footer}>
         <div className={styles["logo-box"]}>
-          <a href="#">
+          <Link to="/">
             {" "}
-            <img src="https://storage.googleapis.com/lumen5-site-images/L5-logo/L5-logo-white.png" />
-          </a>
+            <img
+              src="https://storage.googleapis.com/lumen5-site-images/L5-logo/L5-logo-white.png"
+              alt=""
+            />
+          </Link>
           <p>
             Lumen5 combines powerful A.I. with a simple drag-and-drop interface
             to help you create professional video content in minutes.

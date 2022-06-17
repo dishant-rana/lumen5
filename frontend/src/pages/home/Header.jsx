@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Style.css";
 export const Header = () => {
@@ -44,7 +44,7 @@ export const Header = () => {
             <option value="">Voice Over</option>
           </select>
           <Link to="/pricing">Pricing</Link>
-          <Link to="/enterprice">Enterprise</Link>
+          <Link to="/enterprise">Enterprise</Link>
           <Link to="/case_studies">Case studies</Link>
           <Link to="/learn">Learn</Link>
           <Link to="/signin">
