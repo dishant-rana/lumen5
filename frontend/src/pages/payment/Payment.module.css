@@ -16,16 +16,16 @@
     /* border:2px solid black; */
     /* width:90%; */
     gap:5%;
-    margin-top: 120px;
-
+    
 }
 
 .leftMain_Bx{
-    margin-top: 03px;
+    /* margin-top: 03px; */
+    margin-top: 52px;
     box-sizing: border-box;
     height:449px;
     width:380px;
-    /* border:2px solid black; */
+    border:2px solid black;
     /* margin-left:15%; */
 }
 .pic{
@@ -86,11 +86,12 @@
 
 .rightMain_Bx{
     box-sizing: border-box;
-    /* border:2px solid brown; */
+    border:2px solid brown;
     /* margin:auto; */
-    height:723.2px;
+    height:670.2px;
     width:375px;
     color:#1A1A1AB3;
+    margin-top: 50px;
     
 }
 
@@ -134,7 +135,7 @@
 }
 .inpBx_size{
     height:30px;
-    width:350px;
+    width:352px;
     outline: none;
     border: 0.4px solid rgba(0, 0, 0, 0.347);
     padding-left:12px;
@@ -168,7 +169,7 @@ cardInpTop:focus{
 
 .inpBx_size1{
     height:30px;
-    width:166px;
+    width:168px;
     padding-left:12px;
     outline: none;
     border: 0.4px solid rgba(0, 0, 0, 0.347);

@@ -102,7 +102,7 @@ const Payment = () => {
 
         <div className={style.rightMain_Bx}>
 
-        <div className={style.span2 + " " + style.margin}>Pay with card</div>
+        <div className={style.span2 + " " + style.margin} style={{fontSize:"20px"}}>Pay with card</div>
         <div className={style.emailSet_Bx+ " " + style.margin}>
         <div className={style.emailSet}>
           <div style={{width:"100px"}}>Email</div>
