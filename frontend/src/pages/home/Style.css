@@ -71,7 +71,6 @@
   font-size: 16px;
   border: 1px solid #3722f4;
   color: #3722f4;
-
   border-radius: 50px;
 }
 
@@ -263,6 +262,12 @@
 
 .pointer1 {
   cursor: pointer;
+  text-align: center !important;
+  width: 80px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  padding-top: -100px !important;
+  padding-bottom: 50px !important;
 }
 
 .pointer2:hover {

@@ -68,6 +68,7 @@ h5 {
   margin-top: 1%;
   padding: 5%;
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(3, 30%);
   gap: 2%;
   background-color: whitesmoke;
@@ -101,7 +102,10 @@ h5 {
 .plans_container_2 {
   display: flex;
   gap: 5%;
-  justify-content: right;
+  width: 60%;
+  margin-left: 35%;
+
+  justify-content: space-around;
 }
 .chooseplan_container {
   padding: 5%;

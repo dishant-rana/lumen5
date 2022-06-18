@@ -94,8 +94,8 @@ const Pricing = () => {
                 plan: {
                   title: "starter",
                   price: price1,
-                  period: subtime === "per month" ? "per month" : "per year"
-                }
+                  period: subtime === "per month" ? "per month" : "per year",
+                },
               };
               localStorage.setItem("user", JSON.stringify(data));
               navigate("/payment");
@@ -120,8 +120,8 @@ const Pricing = () => {
                 plan: {
                   title: "professional",
                   price: price2,
-                  period: subtime === "per month" ? "per month" : "per year"
-                }
+                  period: subtime === "per month" ? "per month" : "per year",
+                },
               };
               localStorage.setItem("user", JSON.stringify(data));
               navigate("/payment");
@@ -640,21 +640,21 @@ const Pricing = () => {
           <h3 className={style.frequently}>A few frequently asked questions</h3>
         </div>
         <div className={style.question_div1}>
-          <div>
+          <div style={{ marginLeft: "20%" }}>
             <p>What if I only need Lumen5 for a set amount of time?</p>
             <p>That's fine! You can cancel your account anytime.</p>
           </div>
-          <div>
+          <div style={{ marginLeft: "20%" }}>
             <p>What happens to my videos if I cancel?</p>
             <p>All the videos you create are yours to keep forever and ever.</p>
           </div>
         </div>
         <div className={style.question_div2}>
-          <div>
+          <div style={{ marginLeft: "20%" }}>
             <p>Do you have a non-profit discount?</p>
             <p>We do. Contact us for more information.</p>
           </div>
-          <div>
+          <div style={{ marginLeft: "20%" }}>
             <p>How do I pay for my plan?</p>
             <p>
               You can pay with Visa, Mastercard, and American Express. All

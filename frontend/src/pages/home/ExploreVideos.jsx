@@ -38,7 +38,9 @@ export const ExploreVideos = () => {
       <div className={videoStyle.videoGrid}>
         <h1>Explore videos made with Lumen5</h1>
         <div className={styles.categoryButton}>
-          <button onClick={() => getData(url[0])}>Content Marketing</button>
+          <button style={{ width: "200px" }} onClick={() => getData(url[0])}>
+            Content Marketing
+          </button>
           <button onClick={() => getData(url[1])}>Communications</button>
           <button onClick={() => getData(url[2])}>Promotional</button>
           <button onClick={() => getData(url[3])}>People & Culture</button>
