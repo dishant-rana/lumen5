@@ -4,6 +4,7 @@ import { Dashboard } from "../pages/dashboard/Dashboard";
 
 import { HomeMain } from "../pages/home/HomeMain";
 import { Payment } from "../pages/payment/Payment";
+import { PaymentSuccess } from "../pages/payment/PaymentSuccess";
 import { PricingMain } from "../pages/pricing/PricingMain";
 import { SignIn } from "../pages/signin/SignIn";
 import { SignUp } from "../pages/signup/SignUp";
@@ -18,6 +19,7 @@ const MainRoutes = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/pricing" element={<PricingMain />} />
         <Route path="/payment" element={<Payment />} />
+        <Route path="/payment_success" element={<PaymentSuccess />} />
       </Routes>
     </>
   );

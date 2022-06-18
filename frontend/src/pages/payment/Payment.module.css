@@ -1,6 +1,9 @@
 .main_bx {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Helvetica Neue, Ubuntu, sans-serif;
+  /* background-color: blue; */
+  margin: 0;
+  padding: 0;
   font-size: 16px;
   color: rgba(26, 26, 26, 0.9);
   color: #1a1a1a80;
@@ -13,15 +16,15 @@
   /* border:2px solid black; */
   /* width:90%; */
   gap: 5%;
-  margin-top: 40px;
 }
 
 .leftMain_Bx {
-  margin-top: 03px;
+  /* margin-top: 03px; */
+  margin-top: 52px;
   box-sizing: border-box;
   height: 449px;
   width: 380px;
-  /* border:2px solid black; */
+  /* border: 2px solid black; */
   /* margin-left:15%; */
 }
 .pic {
@@ -77,11 +80,12 @@
 
 .rightMain_Bx {
   box-sizing: border-box;
-  /* border:2px solid brown; */
+  /* border: 2px solid brown; */
   /* margin:auto; */
-  height: 723.2px;
+  height: 670.2px;
   width: 375px;
   color: #1a1a1ab3;
+  margin-top: 50px;
 }
 
 .clrBlck {
@@ -122,24 +126,50 @@
 }
 .inpBx_size {
   height: 30px;
-  width: 350px;
+  width: 352px;
+  outline: none;
+  border: 0.4px solid rgba(0, 0, 0, 0.347);
   padding-left: 12px;
   /* padding:8px 12px; */
   /* border-bottom-left-radius: 6px; */
 }
+.inpBx_size:focus {
+  outline: 1px solid rgb(135, 210, 241);
+  box-shadow: 1px 1px black;
+}
 .cardInpTop {
   border-top-left-radius: 06px;
+  outline: none;
+  border: 0.4px solid rgba(0, 0, 0, 0.347);
+}
+.cardInpTop:focus {
+  outline: 1px solid rgb(135, 210, 241);
+  box-shadow: 1px 1px black;
 }
 
 .cardInpBtm {
   border-bottom-left-radius: 06px;
+  outline: none;
+  border: 0.4px solid rgba(0, 0, 0, 0.347);
+}
+
+.cardInpBtm:focus {
+  outline: 1px solid rgb(135, 210, 241);
+  box-shadow: 1px 1px black;
 }
 
 .inpBx_size1 {
   height: 30px;
-  width: 166px;
+  width: 168px;
   padding-left: 12px;
+  outline: none;
+  border: 0.4px solid rgba(0, 0, 0, 0.347);
   /* padding:8px 12px; */
+}
+
+.inpBx_size1:focus {
+  outline: 1px solid rgb(135, 210, 241);
+  box-shadow: 1px 1px black;
 }
 .slctStyle {
   width: 368px;
@@ -157,6 +187,7 @@
   background-color: rgb(88, 70, 246);
   border-radius: 8px;
   color: #ffffff;
+  cursor: pointer;
 }
 .btnC {
   text-align: center;
@@ -164,4 +195,35 @@
   padding-top: 10px;
   /* border:2px solid black; */
   width: 80px;
+}
+
+/* option:first {
+  color: #999;
+} */
+
+.paySuccss {
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+.btnSuccess {
+  margin: auto;
+  border: none;
+  background-color: green;
+  border: 2px solid green;
+  color: white;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-bottom: 5rem;
+}
+.btnSuccess:active {
+  background-color: rgb(196, 46, 0);
+}
+.btnSuccess:hover {
+  background-color: white;
+  color: green;
 }

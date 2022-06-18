@@ -1,7 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import DropdwnAdd from "./DropdwnAdd";
 import style from "./Payment.module.css";
 
 const Payment = () => {
+  const [show, setState] = useState(false);
+
+  const { body, plan } = JSON.parse(localStorage.getItem("user"));
+  const extractPrice = plan.price.split("$").map(Number);
+  console.log(extractPrice);
+  const [price, setPrice] = useState(0);
+
+  useEffect(() => {
+    setPrice(extractPrice[1]);
+  }, extractPrice);
+  const navigate = useNavigate();
+
+  const inpChange = (e) => {
+    if (e.target.value === null) {
+      alert("please fill the inputs");
+    } else {
+      setState(true);
+    }
+  };
+
+  const handleClick = () => {
+    setState(true);
+  };
+
+  const handleSuscribe = () => {
+    navigate("/payment_success");
+  };
   return (
     <>
       <div className={style.main_bx}>
@@ -16,15 +45,17 @@ const Payment = () => {
             />
           </div>
           <div className={style.head1}>
-            <p className={style.topStyle}>Subscribe to Starter - v2 (Annual)</p>
+            <p className={style.topStyle}>
+              Subscribe to {plan.title} - v2 (Annual)
+            </p>
             <p className={style.clr}>
-              $708.00 <span className={style.span1}>per year</span>{" "}
+              ${price * 12}.00 <span className={style.span1}>per year</span>{" "}
             </p>
           </div>
           <div className={style.opt}>
             <div className={style.opt1}>
-              <span className={style.span2}>Starter - v2 (Annual)</span>
-              <span className={style.span2}>$708.00</span>
+              <span className={style.span2}>{plan.title} - v2 (Annual)</span>
+              <span className={style.span2}>$ {price * 12}.00</span>
             </div>
             <span style={{ fontSize: "12px" }}>Billed yearly</span>
           </div>
@@ -32,7 +63,7 @@ const Payment = () => {
           <div>
             <div className={style.opt1}>
               <span className={style.span2}>Subtotal</span>
-              <span className={style.span2}>$708.00</span>
+              <span className={style.span2}>$ {price * 12}.00</span>
             </div>
             <hr style={{ marginTop: "15px", marginBottom: "15px" }} />
 
@@ -44,7 +75,7 @@ const Payment = () => {
 
             <div className={style.opt1}>
               <span className={style.span2}>Total due today</span>
-              <span className={style.span2}>$708.00</span>
+              <span className={style.span2}>${price * 12}.00</span>
             </div>
           </div>
         </div>
@@ -54,11 +85,16 @@ const Payment = () => {
         {/* <-----------------right side box-----------------> */}
 
         <div className={style.rightMain_Bx}>
-          <div className={style.span2 + " " + style.margin}>Pay with card</div>
+          <div
+            className={style.span2 + " " + style.margin}
+            style={{ fontSize: "20px" }}
+          >
+            Pay with card
+          </div>
           <div className={style.emailSet_Bx + " " + style.margin}>
             <div className={style.emailSet}>
               <div style={{ width: "100px" }}>Email</div>
-              <div className={style.clrBlck}>arnavmania@gmail.com</div>
+              <div className={style.clrBlck}>{body.email}</div>
             </div>
           </div>
 
@@ -68,20 +104,32 @@ const Payment = () => {
             <span>Card information</span>
             <div>
               <input
+                onChange={inpChange}
                 className={style.cardInpTop + " " + style.inpBx_size}
                 placeholder="1234 1234 1234 1234"
+                type="text"
+                maxLength={16}
+                required
               />
             </div>
             <div className={style.inpFlex_Bx}>
               <div>
                 <input
+                  onChange={inpChange}
                   className={style.inpBx_size1 + " " + style.cardInpBtm}
                   placeholder="MM/YY"
+                  required
                 />
               </div>
 
               <div>
-                <input className={style.inpBx_size1} placeholder="CVC" />
+                <input
+                  onChange={inpChange}
+                  className={style.inpBx_size1}
+                  placeholder="CVC"
+                  maxLength={3}
+                  required
+                />
               </div>
             </div>
           </div>
@@ -89,8 +137,10 @@ const Payment = () => {
           <div className={style.margin}>
             <span>Name on card</span>
             <input
+              onChange={inpChange}
               style={{ borderRadius: "07px" }}
               className={style.inpBx_size}
+              required
             />
           </div>
 
@@ -105,13 +155,54 @@ const Payment = () => {
                 className={style.slctStyle + " " + style.inpBx_size1}
                 style={{ height: "36px" }}
               >
+                <option>Country</option>
                 <option>India</option>
+                <option>Japan</option>
+                <option>U.S.A</option>
+                <option>Austria</option>
+                <option>Russia</option>
+                <option>Saudi Arabia</option>
+                <option>Nepal</option>
+                <option>Algeria</option>
+                <option>China</option>
+                <option>Mongolia</option>
+                <option>Australia</option>
+                <option>New zeland</option>
+                <option>Bhutan</option>
+                <option>France</option>
+                <option>Germany</option>
+                <option>South Africa</option>
+                <option>Sri Lanka</option>
+                <option>Afganisthan</option>
+                <option>Ukrain</option>
+                <option>Poland</option>
+                <option>Switerzeland</option>
+                <option>South Koria</option>
+                <option>Malasia</option>
+                <option>Myanmar</option>
+                <option>Bangladesh</option>
+                <option>Canada</option>
+                <option>Indonesia</option>
+                <option>Turkey</option>
+                <option>Uganda</option>
               </select>
 
-              <input className={style.inpBx_size + " " + style.cardInpBtm} />
+              <input
+                onChange={inpChange}
+                className={style.inpBx_size + " " + style.cardInpBtm}
+                placeholder="Address"
+                required
+              />
             </div>
+            {show ? (
+              ""
+            ) : (
+              <span className={style.uDropDwn} onClick={handleClick}>
+                Enter address manually
+              </span>
+            )}
 
-            <span className={style.uDropDwn}>Enter address manually</span>
+            <div>{show ? <DropdwnAdd /> : " "}</div>
           </div>
 
           {/* <----------input-checkbox-------------> */}
@@ -127,7 +218,9 @@ const Payment = () => {
           </div>
 
           <div className={style.btn}>
-            <p className={style.btnC}>Subscribe</p>
+            <p className={style.btnC} onClick={handleSuscribe}>
+              Subscribe
+            </p>
           </div>
 
           <div
@@ -141,6 +234,8 @@ const Payment = () => {
           </div>
         </div>
       </div>
+
+      {/* <PaymentSuccess /> */}
     </>
   );
 };
