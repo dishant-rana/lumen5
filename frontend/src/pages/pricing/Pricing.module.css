@@ -56,8 +56,6 @@
 .plan_div > div > p,
 h5 {
   text-align: left;
-  /* text-decoration-line: underline;
-  text-decoration-style: dotted; */
 }
 .compareplan_div {
   display: flex;
